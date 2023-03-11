@@ -9,7 +9,7 @@ const Team = lazy(() => import('components/Team/Team'));
 const Reviews = lazy(() => import('components/Reviews/Reviews'));
 const Products = lazy(() => import('pages/Products'));
 const ProductDetails = lazy(() => import('pages/ProductDetails'));
-const NotFound = lazy(() => import('pages/NotFound'));
+const NotFound = lazy(() => import('pages/NotFound/NotFound'));
 
 export const App = () => {
   return (
