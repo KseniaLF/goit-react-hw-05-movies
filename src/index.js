@@ -9,7 +9,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <GlobalStyle />
     <Layout>
-      <BrowserRouter basename="/KseniaLF">
+      <BrowserRouter basename="/goit-react-hw-05-movies">
         <App />
       </BrowserRouter>
     </Layout>
