@@ -1,30 +1,34 @@
-import { About } from 'pages/About/About';
-import { Home } from 'pages/Home/Home';
-import { NotFound } from 'pages/NotFound/NotFound';
-import { ProductDetails } from 'pages/ProductDetails/ProductDetails';
-import { Products } from 'pages/Products/Products';
 import { Routes, Route } from 'react-router-dom';
-import { Container, StyledLink } from './App.styled';
+import { lazy } from 'react';
+import { SharedLayout } from 'components/SharedLayout/SharedLayout';
+
+const Home = lazy(() => import('pages/Home'));
+const About = lazy(() => import('pages/About'));
+const Mission = lazy(() => import('components/Mission/Mission'));
+const Team = lazy(() => import('components/Team/Team'));
+const Reviews = lazy(() => import('components/Reviews/Reviews'));
+const Products = lazy(() => import('pages/Products'));
+const ProductDetails = lazy(() => import('pages/ProductDetails'));
+const NotFound = lazy(() => import('pages/NotFound'));
 
 export const App = () => {
   return (
-    <Container>
-      <header>
-        <span>🎃</span>
-        <nav>
-          <StyledLink to="/">Home</StyledLink>
-          <StyledLink to="/about">About</StyledLink>
-          <StyledLink to="/products">Products</StyledLink>
-        </nav>
-      </header>
-
+    <div>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/products" element={<Products />} />
-        <Route path="/products/:id" element={<ProductDetails />} />
+        <Route path="/" element={<SharedLayout />}>
+          <Route index element={<Home />} />
+
+          <Route path="about" element={<About />}>
+            <Route path="mission" element={<Mission />} />
+            <Route path="team" element={<Team />} />
+            <Route path="reviews" element={<Reviews />} />
+          </Route>
+
+          <Route path="products" element={<Products />} />
+          <Route path="products/:id" element={<ProductDetails />} />
+        </Route>
         <Route path="*" element={<NotFound />} />
       </Routes>
-    </Container>
+    </div>
   );
 };
