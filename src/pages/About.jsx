@@ -1,5 +1,6 @@
 import { Suspense } from 'react';
 import { Link, Outlet } from 'react-router-dom';
+import { InfinitySpin } from 'react-loader-spinner';
 
 const About = () => {
   return (
@@ -23,7 +24,13 @@ const About = () => {
         </li>
       </ul>
 
-      <Suspense fallback={<div>Loading subpage...</div>}>
+      <Suspense
+        fallback={
+          <div style={{ textAlign: 'center' }}>
+            <InfinitySpin width="200" color="orange" />
+          </div>
+        }
+      >
         <Outlet />
       </Suspense>
     </div>

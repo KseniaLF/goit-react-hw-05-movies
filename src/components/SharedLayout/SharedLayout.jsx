@@ -1,6 +1,7 @@
 import { Suspense } from 'react';
 import { Container, StyledLink } from 'components/App/App.styled';
 import { Outlet } from 'react-router-dom';
+import { InfinitySpin } from 'react-loader-spinner';
 
 export const SharedLayout = () => {
   return (
@@ -14,7 +15,13 @@ export const SharedLayout = () => {
         </nav>
       </header>
 
-      <Suspense fallback={<div>Loading page...</div>}>
+      <Suspense
+        fallback={
+          <div style={{ textAlign: 'center' }}>
+            <InfinitySpin width="200" color="orange" />
+          </div>
+        }
+      >
         <Outlet />
       </Suspense>
     </Container>
