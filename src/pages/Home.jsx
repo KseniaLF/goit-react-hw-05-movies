@@ -1,13 +1,30 @@
+import { getTrending } from 'api';
+import { Header } from 'components/Header/Header';
+import { TrendingList } from 'components/TrendingList/TrendingList';
+import { useEffect, useState } from 'react';
+
 const Home = () => {
+  const [trending, setTrending] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const data = await getTrending();
+      // console.log(data);
+      setTrending(data);
+    };
+
+    try {
+      fetchData();
+    } catch (error) {
+      console.log(error);
+    }
+  }, []);
+
   return (
     <main>
-      <h1>Welcome to pumpkin 🎃</h1>
-      <img src="https://picsum.photos/960/240" alt="Pumpkin" title="pumpkin" />
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto,
-        laboriosam placeat incidunt rem illum animi nemo quibusdam quia
-        voluptatum voluptate.
-      </p>
+      <Header />
+
+      <TrendingList trending={trending} />
     </main>
   );
 };

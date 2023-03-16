@@ -6,12 +6,14 @@ import { GlobalStyle } from 'constants/GlobalStyle';
 import { App } from 'components/App/App';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+  // <React.StrictMode>
+  //     </React.StrictMode>
+  <>
     <GlobalStyle />
     <Layout>
       <BrowserRouter basename="/goit-react-hw-05-movies">
         <App />
       </BrowserRouter>
     </Layout>
-  </React.StrictMode>
+  </>
 );

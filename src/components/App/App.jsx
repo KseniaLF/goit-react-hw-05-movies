@@ -3,11 +3,13 @@ import { lazy } from 'react';
 import { SharedLayout } from 'components/SharedLayout/SharedLayout';
 
 const Home = lazy(() => import('pages/Home'));
+const Movies = lazy(() => import('pages/Movies'));
+
 const About = lazy(() => import('pages/About'));
 const Mission = lazy(() => import('components/Mission/Mission'));
 const Team = lazy(() => import('components/Team/Team'));
 const Reviews = lazy(() => import('components/Reviews/Reviews'));
-const Products = lazy(() => import('pages/Products'));
+// const Products = lazy(() => import('pages/Products'));
 const ProductDetails = lazy(() => import('pages/ProductDetails'));
 const NotFound = lazy(() => import('pages/NotFound/NotFound'));
 
@@ -24,8 +26,8 @@ export const App = () => {
             <Route path="reviews" element={<Reviews />} />
           </Route>
 
-          <Route path="products" element={<Products />} />
-          <Route path="products/:id" element={<ProductDetails />} />
+          <Route path="movies" element={<Movies />} />
+          <Route path="movies/:movieId" element={<ProductDetails />} />
         </Route>
         <Route path="*" element={<NotFound />} />
       </Routes>
