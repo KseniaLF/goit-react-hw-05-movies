@@ -1,11 +1,9 @@
 import { useSearchParams } from 'react-router-dom';
-// import { getProducts } from 'fakeApi';
-// import { ProductList } from 'components/ProductList/ProductList';
-import { SearchBox } from 'components/SearchBox/SearchBox';
-
-import { MovieList } from 'components/MovieList/MovieList';
 import { useEffect, useState } from 'react';
 import { getSearchMovies } from 'api';
+
+import { SearchBox } from 'components/SearchBox/SearchBox';
+import { MovieList } from 'components/MovieList/MovieList';
 
 const Movies = () => {
   const [movies, setMovies] = useState([]);
@@ -15,12 +13,14 @@ const Movies = () => {
   useEffect(() => {
     const fetchData = async () => {
       const data = await getSearchMovies(searchParam);
-      console.log(data.results);
+      // console.log(searchParam);
       setMovies(data.results);
     };
 
     try {
-      fetchData();
+      if (searchParam) {
+        fetchData();
+      }
     } catch (error) {
       console.log(error);
     }
