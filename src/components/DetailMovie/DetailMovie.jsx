@@ -1,11 +1,13 @@
 import { AdditionalInfo } from 'components/AdditionalInfo/AdditionalInfo';
 
 export const DetailMovie = ({ movieDetails }) => {
-  const movieUrl = `https://image.tmdb.org/t/p/w500/${movieDetails.poster_path}`;
+  const movieUrl = movieDetails.poster_path
+    ? `https://image.tmdb.org/t/p/w500/${movieDetails.poster_path}`
+    : require('image/noImage.jpg');
 
   return (
     <div>
-      <img src={movieUrl} alt="" />
+      <img src={movieUrl} alt="" width={300} />
 
       {movieDetails.title}
       {movieDetails.release_date}

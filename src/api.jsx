@@ -28,3 +28,11 @@ export const getMovieDetails = async movieId => {
   // return console.log(response);
   return response.data;
 };
+
+export const getMovieCredits = async movieId => {
+  const response = await axios.get(
+    `https://api.themoviedb.org/3/movie/${movieId}/credits?api_key=${KEY}&language=en-US`
+  );
+  // return console.log(response);
+  return response.data.cast;
+};
