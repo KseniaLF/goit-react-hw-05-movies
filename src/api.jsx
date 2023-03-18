@@ -36,3 +36,11 @@ export const getMovieCredits = async movieId => {
   // return console.log(response);
   return response.data.cast;
 };
+
+export const getMovieReviews = async movieId => {
+  const response = await axios.get(
+    `https://api.themoviedb.org/3/movie/${movieId}/reviews?api_key=${KEY}&language=en-US&page=1`
+  );
+  // return console.log(response.data);
+  return response.data.results;
+};
