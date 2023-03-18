@@ -1,3 +1,5 @@
+import { AdditionalInfo } from 'components/AdditionalInfo/AdditionalInfo';
+
 export const DetailMovie = ({ movieDetails }) => {
   const movieUrl = `https://image.tmdb.org/t/p/w500/${movieDetails.poster_path}`;
 
@@ -18,6 +20,8 @@ export const DetailMovie = ({ movieDetails }) => {
             return <li key={genre.id}>{genre.name}</li>;
           })}
       </ul>
+
+      <AdditionalInfo />
     </div>
   );
 };
