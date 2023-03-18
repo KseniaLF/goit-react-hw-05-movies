@@ -1,3 +1,5 @@
+import { List } from './TrendingList.styled';
+
 export const TrendingList = ({ trending }) => {
   console.log(trending);
 

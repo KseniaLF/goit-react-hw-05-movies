@@ -28,4 +28,5 @@ export const SearchBtn = styled.div`
 
 export const Title = styled.h2`
   text-align: center;
+  color: orange;
 `;
