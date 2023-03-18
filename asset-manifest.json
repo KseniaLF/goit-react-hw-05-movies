@@ -1,32 +1,32 @@
 {
   "files": {
-    "main.js": "/goit-react-hw-05-movies/static/js/main.2227d605.js",
-    "static/js/823.748a2739.chunk.js": "/goit-react-hw-05-movies/static/js/823.748a2739.chunk.js",
-    "static/js/281.b47d86da.chunk.js": "/goit-react-hw-05-movies/static/js/281.b47d86da.chunk.js",
+    "main.js": "/goit-react-hw-05-movies/static/js/main.28126dcf.js",
+    "static/js/823.df7f5f43.chunk.js": "/goit-react-hw-05-movies/static/js/823.df7f5f43.chunk.js",
+    "static/js/281.f6837e5f.chunk.js": "/goit-react-hw-05-movies/static/js/281.f6837e5f.chunk.js",
     "static/js/175.686c640b.chunk.js": "/goit-react-hw-05-movies/static/js/175.686c640b.chunk.js",
     "static/js/609.d0a8d3e3.chunk.js": "/goit-react-hw-05-movies/static/js/609.d0a8d3e3.chunk.js",
     "static/js/708.504c7c21.chunk.js": "/goit-react-hw-05-movies/static/js/708.504c7c21.chunk.js",
     "static/js/186.77c2454f.chunk.js": "/goit-react-hw-05-movies/static/js/186.77c2454f.chunk.js",
-    "static/js/933.a35491b8.chunk.js": "/goit-react-hw-05-movies/static/js/933.a35491b8.chunk.js",
+    "static/js/837.172424ce.chunk.js": "/goit-react-hw-05-movies/static/js/837.172424ce.chunk.js",
     "static/js/72.8b5ace21.chunk.js": "/goit-react-hw-05-movies/static/js/72.8b5ace21.chunk.js",
     "static/js/673.ef02b1d6.chunk.js": "/goit-react-hw-05-movies/static/js/673.ef02b1d6.chunk.js",
     "static/js/617.b7bfb2e8.chunk.js": "/goit-react-hw-05-movies/static/js/617.b7bfb2e8.chunk.js",
     "static/js/692.3c293aad.chunk.js": "/goit-react-hw-05-movies/static/js/692.3c293aad.chunk.js",
     "index.html": "/goit-react-hw-05-movies/index.html",
-    "main.2227d605.js.map": "/goit-react-hw-05-movies/static/js/main.2227d605.js.map",
-    "823.748a2739.chunk.js.map": "/goit-react-hw-05-movies/static/js/823.748a2739.chunk.js.map",
-    "281.b47d86da.chunk.js.map": "/goit-react-hw-05-movies/static/js/281.b47d86da.chunk.js.map",
+    "main.28126dcf.js.map": "/goit-react-hw-05-movies/static/js/main.28126dcf.js.map",
+    "823.df7f5f43.chunk.js.map": "/goit-react-hw-05-movies/static/js/823.df7f5f43.chunk.js.map",
+    "281.f6837e5f.chunk.js.map": "/goit-react-hw-05-movies/static/js/281.f6837e5f.chunk.js.map",
     "175.686c640b.chunk.js.map": "/goit-react-hw-05-movies/static/js/175.686c640b.chunk.js.map",
     "609.d0a8d3e3.chunk.js.map": "/goit-react-hw-05-movies/static/js/609.d0a8d3e3.chunk.js.map",
     "708.504c7c21.chunk.js.map": "/goit-react-hw-05-movies/static/js/708.504c7c21.chunk.js.map",
     "186.77c2454f.chunk.js.map": "/goit-react-hw-05-movies/static/js/186.77c2454f.chunk.js.map",
-    "933.a35491b8.chunk.js.map": "/goit-react-hw-05-movies/static/js/933.a35491b8.chunk.js.map",
+    "837.172424ce.chunk.js.map": "/goit-react-hw-05-movies/static/js/837.172424ce.chunk.js.map",
     "72.8b5ace21.chunk.js.map": "/goit-react-hw-05-movies/static/js/72.8b5ace21.chunk.js.map",
     "673.ef02b1d6.chunk.js.map": "/goit-react-hw-05-movies/static/js/673.ef02b1d6.chunk.js.map",
     "617.b7bfb2e8.chunk.js.map": "/goit-react-hw-05-movies/static/js/617.b7bfb2e8.chunk.js.map",
     "692.3c293aad.chunk.js.map": "/goit-react-hw-05-movies/static/js/692.3c293aad.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.2227d605.js"
+    "static/js/main.28126dcf.js"
   ]
 }
