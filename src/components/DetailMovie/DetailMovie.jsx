@@ -8,7 +8,7 @@ export const DetailMovie = ({ movieDetails }) => {
 
   const dateParse = Date.parse(movieDetails.release_date);
   const getYear = new Date(dateParse).getFullYear();
-  console.log(movieDetails);
+  // console.log(movieDetails);
 
   return (
     <div>
@@ -21,7 +21,7 @@ export const DetailMovie = ({ movieDetails }) => {
           <h2>
             {movieDetails.title} ({getYear})
           </h2>
-          <p>User Score: {Math.round(movieDetails.popularity)}%</p>
+          <p>User Score: {Math.round(movieDetails.vote_average)}/10</p>
 
           <p>Overview:</p>
           <div>{movieDetails.overview}</div>

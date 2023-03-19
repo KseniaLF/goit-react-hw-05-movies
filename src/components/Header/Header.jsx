@@ -5,15 +5,18 @@ import { BiSearchAlt } from 'react-icons/bi';
 export const Header = () => {
   return (
     <>
+      <Title>Trending today</Title>
       <SearchBtn>
         <Link to="/movies">
-          <button type="button">
+          {/* <button type="button">
             <b> Find next movie now </b> <BiSearchAlt />
-          </button>
+          </button> */}
+
+          <div>
+            Find next movie now <BiSearchAlt />
+          </div>
         </Link>
       </SearchBtn>
-
-      <Title>Trending today</Title>
     </>
   );
 };

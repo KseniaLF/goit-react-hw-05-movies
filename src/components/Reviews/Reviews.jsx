@@ -29,7 +29,7 @@ export const Reviews = () => {
     return <Loader />;
   }
 
-  if (!isLoading) {
+  if (!isLoading && movieReviews.length !== 0) {
     return (
       <ul>
         {movieReviews.map(review => {
@@ -44,7 +44,7 @@ export const Reviews = () => {
     );
   }
 
-  if (!isLoading && movieReviews.length === 0) {
+  if (!isLoading) {
     return <div>We dont have any reviews for this movie</div>;
   }
 };

@@ -28,7 +28,7 @@ export const Cast = () => {
   if (isLoading) {
     return <Loader />;
   }
-  if (!isLoading) {
+  if (!isLoading && movieCast.length !== 0) {
     return (
       <ul>
         {movieCast.map(actor => {
@@ -48,7 +48,7 @@ export const Cast = () => {
     );
   }
 
-  if (!isLoading && movieCast.length === 0) {
+  if (!isLoading) {
     return <div>No results</div>;
   }
 };

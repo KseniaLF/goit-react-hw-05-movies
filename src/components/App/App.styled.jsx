@@ -28,6 +28,10 @@ export const StyledLink = styled(NavLink)`
   color: black;
   font-weight: 500;
 
+  :hover {
+    color: orange;
+  }
+
   &.active {
     color: white;
     background-color: orange;

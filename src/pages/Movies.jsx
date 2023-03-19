@@ -4,6 +4,9 @@ import { getSearchMovies } from 'api';
 
 import { SearchBox } from 'components/SearchBox/SearchBox';
 import { MovieList } from 'components/MovieList/MovieList';
+// import { MovieList } from 'components/TrendingList/TrendingList';
+// import { MovieList } from 'components/MovieList/MovieList';
+// import { TrendingList } from 'components/TrendingList/TrendingList';
 
 const Movies = () => {
   const [movies, setMovies] = useState([]);

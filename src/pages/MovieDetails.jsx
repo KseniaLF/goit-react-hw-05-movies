@@ -1,14 +1,15 @@
 import { getMovieDetails } from 'api';
 import { BackLink } from 'components/BackLink/BackLink';
 import { DetailMovie } from 'components/DetailMovie/DetailMovie';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useLocation, useParams } from 'react-router-dom';
 
 const MovieDetails = () => {
   const { movieId } = useParams();
 
   const location = useLocation();
-  const backLinkHref = location.state?.from ?? '/movies';
+  // const backLinkHref = location.state?.from ?? '/movies';
+  const BackLinkLocationRef = useRef(location.state?.from ?? '/movies');
 
   const [movieDetails, setMovieDetails] = useState(null);
 
@@ -28,7 +29,7 @@ const MovieDetails = () => {
 
   return (
     <div>
-      <BackLink to={backLinkHref}>Back to products</BackLink>
+      <BackLink to={BackLinkLocationRef.current}>Back to list</BackLink>
       {movieDetails && <DetailMovie movieDetails={movieDetails} />}
     </div>
   );
