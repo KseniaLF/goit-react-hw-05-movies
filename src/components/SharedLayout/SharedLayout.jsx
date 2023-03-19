@@ -1,8 +1,8 @@
 import { Suspense } from 'react';
 import { Container, StyledLink } from 'components/App/App.styled';
 import { Outlet } from 'react-router-dom';
-import { InfinitySpin } from 'react-loader-spinner';
 import { Logo } from './SharedLayout.styled';
+import { Loader } from 'components/Loader';
 
 export const SharedLayout = () => {
   return (
@@ -15,13 +15,7 @@ export const SharedLayout = () => {
         </nav>
       </header>
 
-      <Suspense
-        fallback={
-          <div style={{ textAlign: 'center' }}>
-            <InfinitySpin width="200" color="orange" />
-          </div>
-        }
-      >
+      <Suspense fallback={<Loader />}>
         <Outlet />
       </Suspense>
     </Container>

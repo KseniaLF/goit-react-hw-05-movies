@@ -1,22 +1,19 @@
+import { Loader } from 'components/Loader';
 import { Suspense } from 'react';
-import { InfinitySpin } from 'react-loader-spinner';
-import { Link, Outlet } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
+import { AddInfoBlock, StyledLink } from './AdditionalInfo.styled';
 
 export const AdditionalInfo = () => {
   return (
     <div>
-      <b>Additional information: </b>
+      <AddInfoBlock>
+        <b>Additional information: </b>
 
-      <Link to="cast">Cast</Link>
-      <Link to="reviews">Reviews</Link>
+        <StyledLink to="cast">Cast</StyledLink>
+        <StyledLink to="reviews">Reviews</StyledLink>
+      </AddInfoBlock>
 
-      <Suspense
-        fallback={
-          <div style={{ textAlign: 'center' }}>
-            <InfinitySpin width="200" color="orange" />
-          </div>
-        }
-      >
+      <Suspense fallback={<Loader />}>
         <Outlet />
       </Suspense>
     </div>
