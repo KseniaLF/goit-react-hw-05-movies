@@ -6,7 +6,6 @@ import { useLocation, useParams } from 'react-router-dom';
 
 const MovieDetails = () => {
   const { movieId } = useParams();
-
   const location = useLocation();
   // const backLinkHref = location.state?.from ?? '/movies';
   const BackLinkLocationRef = useRef(location.state?.from ?? '/movies');

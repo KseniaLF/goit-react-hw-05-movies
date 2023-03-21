@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
 export const Layout = styled.div`
+  /* min-height: 100vh; */
+
   background-color: rgb(231, 236, 242);
   padding: 16px;
   font-size: 20px;

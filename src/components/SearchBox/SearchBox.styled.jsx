@@ -16,6 +16,15 @@ export const Input = styled.input`
   padding: 8px 32px 8px 8px;
   border-radius: 4px;
   font: inherit;
+  outline: none;
+  /* border: 2px solid orange; */
+
+  :focus {
+    color: orange;
+    box-shadow: 0px 5px 10px orange;
+    /* outline: 1px solid orange; */
+    border-color: orange;
+  }
 `;
 
 export const Icon = styled(HiSearch)`
@@ -23,4 +32,8 @@ export const Icon = styled(HiSearch)`
   height: 20px;
   position: absolute;
   right: 6px;
+
+  :hover {
+    color: orange;
+  }
 `;

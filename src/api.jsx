@@ -3,11 +3,14 @@ import axios from 'axios';
 // axios.defaults.baseURL = 'https://pixabay.com/api';
 const KEY = '02bcb177375afb51516704bac2617151';
 
-export const getTrending = async () => {
+export const getTrending = async abortController => {
   const response = await axios.get(
-    `https://api.themoviedb.org/3/trending/all/day?api_key=${KEY}`
+    `https://api.themoviedb.org/3/trending/movie/day?api_key=${KEY}`,
+    {
+      signal: abortController.signal,
+    }
   );
-  //   return console.log(response.data.results);
+  // console.log(abortController);
   return response.data.results;
 };
 

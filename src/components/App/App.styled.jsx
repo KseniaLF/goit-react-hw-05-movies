@@ -4,7 +4,11 @@ import styled from 'styled-components';
 export const Container = styled.div`
   max-width: 960px;
   margin: 0 auto;
-  /* padding: 0 16px; */
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
   header {
     display: flex;
