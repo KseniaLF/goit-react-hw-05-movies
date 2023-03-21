@@ -14,19 +14,33 @@ const Movies = () => {
   const searchParam = searchParams.get('name') ?? '';
 
   useEffect(() => {
+    const abortController = new AbortController();
+
     const fetchData = async () => {
-      const data = await getSearchMovies(searchParam);
-      // console.log(searchParam);
-      setMovies(data.results);
+      try {
+        if (searchParam) {
+          const data = await getSearchMovies(searchParam, abortController);
+          // console.log(searchParam);
+          setMovies(data.results);
+        }
+      } catch (error) {
+        console.log(error);
+      }
     };
 
-    try {
-      if (searchParam) {
-        fetchData();
-      }
-    } catch (error) {
-      console.log(error);
-    }
+    fetchData();
+
+    return () => {
+      abortController.abort();
+    };
+
+    // try {
+    //   if (searchParam) {
+    //     fetchData();
+    //   }
+    // } catch (error) {
+    //   console.log(error);
+    // }
   }, [searchParam]);
 
   const visibleMovies = movies.filter(movie => {

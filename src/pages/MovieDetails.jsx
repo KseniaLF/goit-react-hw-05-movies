@@ -13,17 +13,22 @@ const MovieDetails = () => {
   const [movieDetails, setMovieDetails] = useState(null);
 
   useEffect(() => {
+    const abortController = new AbortController();
+
     const fetchData = async () => {
-      const data = await getMovieDetails(movieId);
-      // console.log(data);
-      setMovieDetails(data);
+      try {
+        const data = await getMovieDetails(movieId, abortController);
+        // console.log(data);
+        setMovieDetails(data);
+      } catch (error) {
+        console.log(error);
+      }
     };
 
-    try {
-      fetchData();
-    } catch (error) {
-      console.log(error);
-    }
+    fetchData();
+    return () => {
+      abortController.abort();
+    };
   }, [movieId]);
 
   return (

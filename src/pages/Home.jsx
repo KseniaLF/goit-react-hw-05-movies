@@ -11,23 +11,24 @@ const Home = () => {
 
   useEffect(() => {
     setIsLoading(true);
+
     const abortController = new AbortController();
 
     const fetchData = async () => {
-      const data = await getTrending(abortController);
-      // console.log(data);
-      setTrending(data);
-      setIsLoading(false);
+      try {
+        const data = await getTrending(abortController);
+        // console.log(data);
+        setTrending(data);
+        setIsLoading(false);
+      } catch (error) {
+        console.log(error);
+      }
     };
 
-    try {
-      fetchData();
-    } catch (error) {
-      console.log(error);
-    }
+    fetchData();
 
     return () => {
-      // abortController.abort();
+      abortController.abort();
     };
   }, []);
 

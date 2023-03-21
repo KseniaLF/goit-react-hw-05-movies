@@ -11,18 +11,24 @@ export const Reviews = () => {
 
   useEffect(() => {
     setiILoading(true);
+    const abortController = new AbortController();
+
     const fetchData = async () => {
-      const data = await getMovieReviews(movieId);
-      // console.log(data);
-      setMovieReviews(data);
-      setiILoading(false);
+      try {
+        const data = await getMovieReviews(movieId, abortController);
+        // console.log(data);
+        setMovieReviews(data);
+        setiILoading(false);
+      } catch (error) {
+        console.log(error);
+      }
     };
 
-    try {
-      fetchData();
-    } catch (error) {
-      console.log(error);
-    }
+    fetchData();
+
+    return () => {
+      abortController.abort();
+    };
   }, [movieId]);
 
   if (isLoading) {
