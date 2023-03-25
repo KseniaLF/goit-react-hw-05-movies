@@ -8,6 +8,7 @@ export const SearchBox = ({ value, onChange }) => {
         autoFocus
         type="text"
         value={value}
+        debounceTimeout={1000}
         onChange={e => onChange(e.target.value)}
       />
     </Wrapper>
