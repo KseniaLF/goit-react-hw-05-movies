@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { AdditionalInfo } from 'components/AdditionalInfo/AdditionalInfo';
 import { MovieBlock, MovieImg, MovieInfo } from './DetailMovie.styled';
 
@@ -39,4 +40,8 @@ export const DetailMovie = ({ movieDetails }) => {
       <AdditionalInfo />
     </div>
   );
+};
+
+DetailMovie.propTypes = {
+  movieDetails: PropTypes.object.isRequired,
 };

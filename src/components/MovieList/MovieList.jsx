@@ -1,5 +1,6 @@
-import { List } from 'components/TrendingList/TrendingList.styled';
+import PropTypes from 'prop-types';
 import { Link, useLocation } from 'react-router-dom';
+import { List } from 'components/TrendingList/TrendingList.styled';
 
 export const MovieList = ({ movies }) => {
   const location = useLocation();
@@ -22,4 +23,8 @@ export const MovieList = ({ movies }) => {
       })}
     </List>
   );
+};
+
+MovieList.propTypes = {
+  movies: PropTypes.array.isRequired,
 };

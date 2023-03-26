@@ -1,6 +1,6 @@
-import { List } from './TrendingList.styled';
-
+import PropTypes from 'prop-types';
 import { Link, useLocation } from 'react-router-dom';
+import { List } from './TrendingList.styled';
 
 export const TrendingList = ({ trending }) => {
   const location = useLocation();
@@ -23,4 +23,8 @@ export const TrendingList = ({ trending }) => {
       })}
     </List>
   );
+};
+
+TrendingList.propTypes = {
+  trending: PropTypes.array.isRequired,
 };
