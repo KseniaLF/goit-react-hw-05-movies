@@ -1,7 +1,8 @@
 import { getTrending } from 'api';
 import { Header } from 'components/Header/Header';
 import { Loader } from 'components/Loader';
-import { TrendingList } from 'components/TrendingList/TrendingList';
+import { TrendingList } from 'components/MovieList/MovieList';
+// import { TrendingList } from 'components/TrendingList/TrendingList';
 import { useEffect, useState } from 'react';
 
 const Home = () => {
